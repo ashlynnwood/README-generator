@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 // generateMarkdown function from utils folder (module being exported, bring in over here)
 const generateM = require('./generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 inquirer
   .prompt = ([
     {
@@ -43,14 +43,14 @@ inquirer
     {
       type: 'input',
       name: 'install',
-      message: 'What command should be run to install dependencies?'
-      // has default answer (npm i)
+      message: 'What command should be run to install dependencies?',
+      default: 'npm i',
     },
     {
       type: 'input',
       name: 'test',
-      message: 'What command should be run to run tests?'
-      // has default answer (npm test)
+      message: 'What command should be run to run tests?',
+      default: 'npm test',
     },
     {
       type: 'input',

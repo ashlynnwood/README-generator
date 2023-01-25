@@ -1,9 +1,13 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 // fs
-// path (maybe- if looking to put file in specific directory)
-// inquirer
-// generateMarkdown function from utils folder (module being exported, bring in over here)
+const fs = require('fs');
 
+// path (maybe- if looking to put file in specific directory)
+
+// inquirer
+const inquirer = require('inquirer');
+// generateMarkdown function from utils folder (module being exported, bring in over here)
+const generateM = require('./generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [

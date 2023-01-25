@@ -8,7 +8,6 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
-
 // Create an array of questions for user input
 const questions = [
     {
@@ -76,13 +75,12 @@ const questions = [
 
 // Create a function to initialize app
 function init() {
-  // start your inquirer prompt, passing in questions array
+  // start inquirer prompt, passing in questions array
   inquirer
     .prompt(questions)
 
-  // .then with inquirer responses
+  // .then with inquirer data
     .then((data) => {
-      // const fileName = 'README.md';
 
     // call writeToFile func passing in values it needs
       fs.writeFile('README.MD', generateMarkdown(data), (err) =>

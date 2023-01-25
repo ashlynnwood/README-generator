@@ -1,25 +1,74 @@
 // Include packages needed for this application
-// fs
 const fs = require('fs');
 
 // path (maybe- if looking to put file in specific directory)
 
-// inquirer
 const inquirer = require('inquirer');
 // generateMarkdown function from utils folder (module being exported, bring in over here)
 const generateM = require('./generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = [
-  {
-    type: 'input',
-    name: 'example',
-    message: 'Is this an example question?'
-  },
-  {
+inquirer
+  .prompt = ([
+    {
+      type: 'input',
+      name: 'username',
+      message: 'What is your github username?',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?',
 
-  },
-];
+    },
+    {
+      type: 'input',
+      name: 'title',
+      message: `What is your project's name?`,
+
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Please write a short description of your project:',
+
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'What kind of license should your project have?',
+      choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
+
+    },
+    {
+      type: 'input',
+      name: 'install',
+      message: 'What command should be run to install dependencies?'
+      // has default answer (npm i)
+    },
+    {
+      type: 'input',
+      name: 'test',
+      message: 'What command should be run to run tests?'
+      // has default answer (npm test)
+    },
+    {
+      type: 'input',
+      name: 'use',
+      message: 'What does the user need to know about using the repo?'
+    },
+    {
+      type: 'input',
+      name: 'contrib',
+      message: 'What does the user need to know about contributing to the repo?'
+      
+    },
+// readme generated into utils folder
+])
+.then((data) => {
+  const fileName = 'README.md';
+      
+})
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {

@@ -5,11 +5,12 @@ const fs = require('fs');
 
 const inquirer = require('inquirer');
 // generateMarkdown function from utils folder (module being exported, bring in over here)
-const generateM = require('./generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+
+
 
 // Create an array of questions for user input
-inquirer
-  .prompt = ([
+const questions = [
     {
       type: 'input',
       name: 'username',
@@ -64,25 +65,31 @@ inquirer
       
     },
 // readme generated into utils folder
-])
-.then((data) => {
-  const fileName = 'README.md';
-      
-})
+]
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data, error)
   // use fs to write a new file with the data returned from 
   // generateMarkdown function
   // to see how this works.... look at init func
-}
 
-// TODO: Create a function to initialize app
+
+// Create a function to initialize app
 function init() {
   // start your inquirer prompt, passing in questions array
-  // .then with the inquirer responses
-  // call writeToFile func passing in values it needs
-  writeToFile('README.MD', generateMarkdown(responsesFromInquirer));
+  inquirer
+    .prompt(questions)
+
+  // .then with inquirer responses
+    .then((data) => {
+      // const fileName = 'README.md';
+
+    // call writeToFile func passing in values it needs
+      fs.writeFile('README.MD', generateMarkdown(data), (err) =>
+        err ? console.error(err) : console.log('Success! README.md generated')
+      );
+});
+  
 }
 
 // Function call to initialize app

@@ -1,9 +1,9 @@
-# project
+# My-Project
 
-  [GitHub license](https://img.shields.io/badge/License-MIT-blue)
+  ![GitHub license](https://img.shields.io/badge/License-MIT-blue)
 
   ## Description
-  bio
+  This is the best description ever!
 
   ## Table of Contents
   * [Installation](#installation)
@@ -18,13 +18,13 @@
   npm i
 
   ## Usage
-  lalal
+  This is how you use it!
 
   ## License
   This project is licensed under the MIT.
 
   ## Contributing
-  git fork
+  Git fork and code away
 
   ## Tests
   To run tests, run the following command: 
@@ -32,4 +32,4 @@
 
   ## Questions 
   If you have any questions about the repo, open an issue or 
-  contact me directly at ash@mail.com. You can find more of my work at ash.
+  contact me directly at ashlynn@gmail.com. You can find more of my work at ashlynnwood.

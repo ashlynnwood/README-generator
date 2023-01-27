@@ -1,6 +1,9 @@
 # README-generator
 
-  [GitHub license](https://img.shields.io/badge/License-MIT-blue)
+  ![GitHub-license](https://img.shields.io/badge/License-MIT-blue)
+
+  ## Preview
+  ![readme-generator-preview](./node-js.gif)
 
   ## Description
   This project was designed to be a README.md generator. It allows users to quickly and easily generate a README.md file for any project via command line prompts.
